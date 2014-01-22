@@ -1,7 +1,7 @@
 try {
-    var nightmareJS = require('nightmarejs').nightmare('test');
+    var nightmareJS = require('nightmarejs').nightmare({test:true});
 } catch(e) {
-    var nightmareJS = require('../lib/nightmare').nightmare('test');
+    var nightmareJS = require('../lib/nightmare').nightmare({test:true});
 }
 
 nightmareJS.notifyCasperMessage = function(msg) {

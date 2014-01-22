@@ -1,3 +1,8 @@
+var casper = require('casper').create({
+	verbose: true,
+    logLevel: 'debug'
+});
+
 casper.start('http://www.google.com', function() {
     this.test.assertTitle('Google', 'Google has the correct title');
     this.sendMessageToParent({ type: 'statement', msg: 'Hello Nightmare.'})
